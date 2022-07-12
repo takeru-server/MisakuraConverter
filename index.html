@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	
+	<!-- デザイン参考：https://deshinon.com/2019/03/03/oshare-kopipe-login-css/ -->
+	<!-- みさくら参考：http://yellow.ribbon.to/~sc/contents.html -->
+	<!-- モーダル参考：https://webdesignday.jp/inspiration/pickup/4680/ -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>みさくらコンバーター</title>
+		<!-- CSSを調整 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- ライブラリ読み込み -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<h1>みさくら変換</h1>
+				
+				<form class="form">
+					<input type="text" placeholder="変換前" name="BeforeText" style="ime-mode: active">
+					<input type="text" placeholder="変換後" name = "AfterText" readonly class="js-modal-open">	<!-- ←このクラスをクリックすると、モーダルが開く -->
+					<!-- モーダルの処理ここから -->
+					<div class="modal js-modal">
+				        <div class="modal__bg js-modal-close"></div>
+				        <div class="modal__content">
+				        	<!-- モーダルの本文はこのpタグに表示される -->
+				            <p id="ModalValue">変換してから開いてね</p>
+				            <a class="js-modal-close" href="">閉じる</a>
+				        </div><!--modal__inner-->
+				    </div><!--modal-->
+					<!-- モーダルの処理ここまで -->
+					<button type="submit" id="login-button">おしゃれなボタン</button>
+				</form>
+			</div>
+			
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!-- 自作コードの読み込み -->
+		<script src="js/main.js"></script>
+		<script src="js/misakura.js"></script>
+	</body>
+</html>
